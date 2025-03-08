@@ -88,30 +88,54 @@ SET mobile_weight_gram = CAST(REPLACE(mobile_weight_gram, 'g', '') AS DECIMAL)
 WHERE mobile_weight_gram LIKE '%g';
 
 -- ram_gb column
-UPDATE mobile_2025
-SET mobile_weight_gram = REPLACE(mobile_weight_gram, 'g', '')
-WHERE mobile_weight_gram LIKE '%g';
+UPDATE mobile_tb
+SET ram_gb = REPLACE(REPLACE(REPLACE(REPLACE(ram_gb, 'GB', ''), '/', ''), ' ', ''), ',', '');
 
-UPDATE mobile_2025
-SET ram_gb = CAST(SUBSTRING(ram_gb, 1, CHARINDEX('/', ram_gb) - 1) AS DECIMAL)
-WHERE ram_gb LIKE '%/%';
+SELECT * FROM mobile_tb
+WHERE ram_gb = '812'
 
-ALTER TABLE mobile_2025
-ALTER COLUMN ram_gb DECIMAL(10, 2);
+UPDATE mobile_tb
+SET ram_gb = '8'
+WHERE ram_gb = '812'
+
+ALTER TABLE mobile_tb
+ALTER COLUMN ram_gb DECIMAL(10,2)
 
 -- battery_capacity_maH column
-UPDATE mobile_2025
-SET battery_capacity_maH = REPLACE(battery_capacity_maH, 'maH', '') 
+
+UPDATE mobile_tb
+SET battery_capacity_maH = REPLACE(REPLACE(REPLACE(REPLACE(battery_capacity_maH, 'maH', ''), '/', ''), ' ', ''), ',', '')
 WHERE battery_capacity_maH LIKE '%maH';
 
-UPDATE mobile_2025
-SET battery_capacity_maH = REPLACE(battery_capacity_maH, '.', '')
-
-UPDATE mobile_2025
-SET battery_capacity_maH = REPLACE(battery_capacity_maH, ',', '')
-
-ALTER TABLE mobile_2025
+ALTER TABLE mobile_tb
 ALTER COLUMN battery_capacity_maH DECIMAL(10,2)
+
+--screen_size_inches column
+UPDATE mobile_2025
+SET screen_size_inches = CAST(LEFT(screen_size_inches, CHARINDEX(' ', screen_size_inches) - 1) AS FLOAT)
+
+-- launch_price_pkr column
+DELETE FROM mobile_tb
+WHERE launch_price_pkr = 'not available';
+
+UPDATE mobile_tb
+SET launch_price_pkr = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_pkr, 'PKR', ''), '/', ''), ' ', ''), ',', '')
+
+-- launch_price_inr column
+UPDATE mobile_table
+SET launch_price_inr = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_inr, 'INR', ''), '/', ''), ' ', ''), ',', '')
+
+-- launch_price_cny column
+UPDATE mobile_table
+SET launch_price_cny = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_cny, 'CNY', ''), '/', ''), ' ', ''), ',', '')
+
+-- launch_price_usd column
+UPDATE mobile_table
+SET launch_price_usd = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_usd, 'USD', ''), '/', ''), ' ', ''), ',', '')
+
+-- launch_price_aed column
+UPDATE mobile_table
+SET launch_price_aed = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_aed, 'AED', ''), '/', ''), ' ', ''), ',', '')
 
 ```
 
