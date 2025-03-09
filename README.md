@@ -118,25 +118,40 @@ SET screen_size_inches = CAST(LEFT(screen_size_inches, CHARINDEX(' ', screen_siz
 -- launch_price_pkr column
 DELETE FROM mobile_tb
 WHERE launch_price_pkr = 'not available';
-
+--
 UPDATE mobile_tb
 SET launch_price_pkr = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_pkr, 'PKR', ''), '/', ''), ' ', ''), ',', '')
+--
+ALTER TABLE mobile_table
+ALTER COLUMN launch_price_pkr DECIMAL(10,2)
 
 -- launch_price_inr column
 UPDATE mobile_table
 SET launch_price_inr = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_inr, 'INR', ''), '/', ''), ' ', ''), ',', '')
+--
+ALTER TABLE mobile_table
+ALTER COLUMN launch_price_inr DECIMAL(10,2)
 
 -- launch_price_cny column
 UPDATE mobile_table
-SET launch_price_cny = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_cny, 'CNY', ''), '/', ''), ' ', ''), ',', '')
+SET launch_price_cny = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(launch_price_cny, '¥', ''), 'CNY', ''), '/', ''), ' ', ''), ',', '')
+--
+ALTER TABLE mobile_table
+ALTER COLUMN launch_price_cny DECIMAL(10,2)
 
 -- launch_price_usd column
 UPDATE mobile_table
 SET launch_price_usd = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_usd, 'USD', ''), '/', ''), ' ', ''), ',', '')
+--
+ALTER TABLE mobile_table
+ALTER COLUMN launch_price_usd DECIMAL(10,2)
 
 -- launch_price_aed column
 UPDATE mobile_table
 SET launch_price_aed = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_aed, 'AED', ''), '/', ''), ' ', ''), ',', '')
+--
+ALTER TABLE mobile_table
+ALTER COLUMN launch_price_aed DECIMAL(10,2)
 
 ```
 
@@ -155,7 +170,85 @@ SELECT
 	COUNT(model_name) AS total_mobile_launched
 FROM mobile_table
 GROUP BY company_name
+```
+### Mobile Phone with Highest Launch Price (USD)
+```SQL
+SELECT TOP 10
+	company_name,
+	model_name,
+	launch_price_usd
+FROM mobile_table
+ORDER BY launch_price_usd DESC
+```
+### Mobile Phone with Cheapest Launch Price (USD)
+```sql
+SELECT TOP 10
+company_name,
+model_name,
+launch_price_usd
+FROM mobile_table
+ORDER BY launch_price_usd ASC
+```
+### Mobile Phones with the Highest Annual Prices
+```sql
+SELECT 
+    m.launch_year,
+    m.company_name,
+    m.model_name,
+    m.launch_price_usd AS highest_mobile_price
+FROM 
+    mobile_table m
+WHERE 
+    m.launch_price_usd = (
+        SELECT 
+            MAX(launch_price_usd)
+        FROM 
+            mobile_table
+        WHERE 
+            launch_year = m.launch_year
+    )
+ORDER BY 
+    m.launch_year;
 
+```
+### Mobile Phones with the Highest Annual Prices
+```sql
+SELECT 
+    m.launch_year,
+    m.company_name,
+    m.model_name,
+    m.launch_price_usd AS lowest_mobile_price
+FROM 
+    mobile_table m
+WHERE 
+    m.launch_price_usd = (
+        SELECT 
+            MIN(launch_price_usd)
+        FROM 
+            mobile_table
+        WHERE 
+            launch_year = m.launch_year
+    )
+ORDER BY 
+    m.launch_year;
+```
+### Average Mobile Prize per Company
+```sql
+SELECT
+	company_name,
+	AVG(launch_price_usd) AS avg_price
+FROM mobile_table
+GROUP BY company_name
+ORDER BY avg_price ASC
+```
+### Average Selling Prices of Mobile Phones Based on Processor Type
+```sql
+SELECT 
+	processor,
+	AVG(launch_price_usd) AS avg_price
+FROM mobile_table
+GROUP BY processor
+ORDER BY avg_price DESC
 ```
 
 
