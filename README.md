@@ -80,7 +80,8 @@ WHERE
 	or launch_year IS NULL
 
 ```
-Character Cleaning & Data Type Transformation
+
+Data cleansing to remove unwanted characters and adjust data types
 ```sql
 -- mobile_weight_gram column
 UPDATE mobile_2025
@@ -136,6 +137,24 @@ SET launch_price_usd = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_usd, 'USD', 
 -- launch_price_aed column
 UPDATE mobile_table
 SET launch_price_aed = REPLACE(REPLACE(REPLACE(REPLACE(launch_price_aed, 'AED', ''), '/', ''), ' ', ''), ',', '')
+
+```
+
+## Exploratory Data Analysis (EDA): Descriptive statistics, data visualization.
+### 1. Companies that launched mobile phones in 2025
+```sql
+SELECT DISTINCT company_name
+FROM mobile_table
+```
+### The Number Of Mobile Phone Launched By Each Company
+```sql
+-- the number of mobile phone lauched by each company
+
+SELECT 
+	company_name,
+	COUNT(model_name) AS total_mobile_launched
+FROM mobile_table
+GROUP BY company_name
 
 ```
 
