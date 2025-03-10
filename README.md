@@ -211,7 +211,7 @@ ORDER BY
     m.launch_year;
 
 ```
-### Mobile Phones with the Highest Annual Prices
+### Mobile Phones with the Lowest Annual Prices
 ```sql
 SELECT 
     m.launch_year,
@@ -250,5 +250,80 @@ FROM mobile_table
 GROUP BY processor
 ORDER BY avg_price DESC
 ```
+### Highest Mobile Price By Company
+```sql
+SELECT 
+	m.company_name,
+	m.model_name,
+	m.ram_gb,
+	m.front_camera,
+	m.back_camera,
+	m.processor,
+	m.battery_capacity_maH,
+	m.screen_size_inches,
+	m.launch_price_usd AS highest_price
+FROM mobile_table m
+WHERE launch_price_usd = (
+	SELECT MAX(launch_price_usd)
+	FROM mobile_table
+	WHERE company_name = m.company_name)
+ORDER BY m.launch_price_usd
+
+```
+### Lowest Mobile Price By Company
+```sql
+SELECT 
+	m.company_name,
+	m.model_name,
+	m.ram_gb,
+	m.front_camera,
+	m.back_camera,
+	m.processor,
+	m.battery_capacity_maH,
+	m.screen_size_inches,
+	m.launch_price_usd AS lowest_price
+FROM mobile_table m
+WHERE launch_price_usd = (
+	SELECT MIN(launch_price_usd)
+	FROM mobile_table
+	WHERE company_name = m.company_name)
+ORDER BY m.launch_price_usd
+
+```
+### Average Mobile Price Per Company
+```sql
+SELECT 
+	company_name,
+	AVG(launch_price_usd) AS average_price
+FROM mobile_table 
+GROUP BY company_name
+ORDER BY average_price 
+```
+### Cheapest Mobile Phone Per Processor Type
+```sql
+WITH avg_temp AS(
+	SELECT 
+		processor,
+		AVG(launch_price_usd) AS avg_price
+	FROM mobile_table
+	GROUP BY processor
+)
+SELECT 
+	mt.processor, 
+	av.avg_price AS avg_price_per_processor,
+	mt.model_name AS cheapest_model_per_processor,
+	mt.launch_price_usd AS cheapest_price_per_processor
+FROM mobile_table mt
+INNER JOIN avg_temp AS av ON av.processor = mt.processor
+WHERE mt.launch_price_usd = (
+    SELECT MIN(launch_price_usd) 
+    FROM mobile_table 
+    WHERE processor = mt.processor
+)
+
+
+```
+
+
 
 
