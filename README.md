@@ -161,7 +161,7 @@ ALTER COLUMN launch_price_aed DECIMAL(10,2)
 SELECT DISTINCT company_name
 FROM mobile_table
 ```
-### The Number Of Mobile Phone Launched By Each Company
+### 2. The Number Of Mobile Phone Launched By Each Company
 ```sql
 -- the number of mobile phone lauched by each company
 
@@ -171,7 +171,7 @@ SELECT
 FROM mobile_table
 GROUP BY company_name
 ```
-### Mobile Phone with Highest Launch Price (USD)
+### 3. Mobile Phone with Highest Launch Price (USD)
 ```SQL
 SELECT TOP 10
 	company_name,
@@ -180,7 +180,7 @@ SELECT TOP 10
 FROM mobile_table
 ORDER BY launch_price_usd DESC
 ```
-### Mobile Phone with Cheapest Launch Price (USD)
+### 4. Mobile Phone with Cheapest Launch Price (USD)
 ```sql
 SELECT TOP 10
 company_name,
@@ -189,7 +189,7 @@ launch_price_usd
 FROM mobile_table
 ORDER BY launch_price_usd ASC
 ```
-### Mobile Phones with the Highest Annual Prices
+### 5. Mobile Phones with the Highest Annual Prices
 ```sql
 SELECT 
     m.launch_year,
@@ -211,7 +211,7 @@ ORDER BY
     m.launch_year;
 
 ```
-### Mobile Phones with the Lowest Annual Prices
+### 6. Mobile Phones with the Lowest Annual Prices
 ```sql
 SELECT 
     m.launch_year,
@@ -232,7 +232,7 @@ WHERE
 ORDER BY 
     m.launch_year;
 ```
-### Average Mobile Prize per Company
+### 7. Average Mobile Prize per Company
 ```sql
 SELECT
 	company_name,
@@ -241,7 +241,7 @@ FROM mobile_table
 GROUP BY company_name
 ORDER BY avg_price ASC
 ```
-### Average Selling Prices of Mobile Phones Based on Processor Type
+### 8. Average Selling Prices of Mobile Phones Based on Processor Type
 ```sql
 SELECT 
 	processor,
@@ -250,7 +250,7 @@ FROM mobile_table
 GROUP BY processor
 ORDER BY avg_price DESC
 ```
-### Highest Mobile Price By Company
+### 9. Highest Mobile Price By Company
 ```sql
 SELECT 
 	m.company_name,
@@ -270,7 +270,7 @@ WHERE launch_price_usd = (
 ORDER BY m.launch_price_usd
 
 ```
-### Lowest Mobile Price By Company
+### 10. Lowest Mobile Price By Company
 ```sql
 SELECT 
 	m.company_name,
@@ -290,7 +290,7 @@ WHERE launch_price_usd = (
 ORDER BY m.launch_price_usd
 
 ```
-### Average Mobile Price Per Company
+### 11. Average Mobile Price Per Company
 ```sql
 SELECT 
 	company_name,
@@ -299,7 +299,7 @@ FROM mobile_table
 GROUP BY company_name
 ORDER BY average_price 
 ```
-### Cheapest Mobile Phone Per Processor Type
+### 12. Cheapest Mobile Phone Per Processor Type
 ```sql
 WITH avg_temp AS(
 	SELECT 
