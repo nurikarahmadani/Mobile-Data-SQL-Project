@@ -57,7 +57,7 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >	CODEPAGE = '1252'
 >)
 >```
->**Data Result Snippet**
+>**Sample Data**
 >
 >![image](https://github.com/user-attachments/assets/4edde339-2ec1-49a0-8c47-813ea65f9547)
 >
@@ -157,7 +157,7 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >ALTER TABLE mobile_table
 >ALTER COLUMN launch_price_aed DECIMAL(10,2)
 >```
->**Cleaned Data Snippet**
+>**Cleaned Data Sample**
 >
 >![image](https://github.com/user-attachments/assets/7d0023ce-3a59-4dbf-9014-d1092e6a22e8)
 >
@@ -168,7 +168,7 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 > SELECT DISTINCT company_name
 > FROM mobile_table
 > ```
-> **Result snippet**
+> **Data Result Sample**
 
 > ![image](https://github.com/user-attachments/assets/b279107a-5e89-40d5-a83b-040d6e880838)
 
@@ -181,7 +181,7 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 > FROM mobile_table
 > GROUP BY company_name
 > ```
-> **Result Snippet**
+> **Data Result Sample**
 
 > ![image](https://github.com/user-attachments/assets/2eb5f4f5-d526-4733-a941-a20a2836b78d)
 
@@ -199,6 +199,10 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >FROM mobile_table
 >ORDER BY launch_price_usd DESC
 >```
+>**Data Result Sample**
+>
+>![image](https://github.com/user-attachments/assets/44c17b0a-b6c8-45cd-9b01-88f85f6cf073)
+
 ### 4. Mobile Phone with Cheapest Launch Price (USD)
 >```sql
 >SELECT TOP 10
