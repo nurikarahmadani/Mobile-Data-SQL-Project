@@ -57,6 +57,10 @@ WITH(
 	CODEPAGE = '1252'
 )
 ```
+**Data Result Snippet**
+
+![image](https://github.com/user-attachments/assets/4edde339-2ec1-49a0-8c47-813ea65f9547)
+
 
 ## 2. Data Cleaning: Handle missing values, correct data types.
 Check null values
