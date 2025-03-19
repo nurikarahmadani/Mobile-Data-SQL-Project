@@ -212,7 +212,7 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >FROM mobile_table
 >ORDER BY launch_price_usd ASC
 >```
->### 5. Mobile Phones with the Highest Annual Prices
+### 5. Mobile Phones with the Highest Annual Prices
 >```sql
 >SELECT 
 >    m.launch_year,
