@@ -190,7 +190,7 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >
 > <img src="https://github.com/user-attachments/assets/172f5e54-9ac6-4beb-be01-19ab0e7c9e56" width="800">
 
-### 3. Mobile Phone with Highest Launch Price (USD)_
+### 3. Mobile Phone with Highest Launch Price (USD)
 >```SQL
 >SELECT TOP 10
 >	company_name,
@@ -202,6 +202,11 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >**Data Result Sample**
 >
 >![image](https://github.com/user-attachments/assets/44c17b0a-b6c8-45cd-9b01-88f85f6cf073)
+>
+>**Visualization**
+>
+>![image](https://github.com/user-attachments/assets/4045993f-c51e-4e8c-9b98-d99ac5fc34f2)
+
 
 ### 4. Mobile Phone with Cheapest Launch Price (USD)
 >```sql
@@ -209,9 +214,17 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >company_name,
 >model_name,
 >launch_price_usd
->FROM mobile_table
+>FROM mobile_table              
 >ORDER BY launch_price_usd ASC
 >```
+>**Data Result Sample**
+>
+>![image](https://github.com/user-attachments/assets/7ecb9f34-81e8-4932-a731-888a4c0709e4)
+>
+>**Visualization**
+>
+>![image](https://github.com/user-attachments/assets/3ecdaa59-91ff-4991-abde-88e10e1d7158)
+>
 ### 5. Mobile Phones with the Highest Annual Prices
 >```sql
 >SELECT 
@@ -234,6 +247,15 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >    m.launch_year;
 >
 >```
+>
+>**Data Result Sample**
+>
+>![image](https://github.com/user-attachments/assets/fcde1edc-ab82-470a-8cbc-b5523f375008)
+>
+>**Visualization**
+>
+>![image](https://github.com/user-attachments/assets/4fe0e98f-3e6e-47fe-a4d4-3a1c63b10c21)
+
 ### 6. Mobile Phones with the Lowest Annual Prices
 >```sql
 >SELECT 
@@ -255,6 +277,14 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >ORDER BY 
 >    m.launch_year;
 >```
+>**Data Result Sample**
+>
+>![image](https://github.com/user-attachments/assets/69d64a20-da0f-4990-a85a-89c350fcf0f1)
+>
+>**Visualization**
+>
+>![image](https://github.com/user-attachments/assets/02941faf-9453-47b0-8993-015c8cadd2aa)
+
 ### 7. Average Mobile Prize per Company
 >```sql
 >SELECT
@@ -264,16 +294,15 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >GROUP BY company_name
 >ORDER BY avg_price ASC
 >```
-### 8. Average Selling Prices of Mobile Phones Based on Processor Type
->```sql
->SELECT 
->	processor,
->	AVG(launch_price_usd) AS avg_price
->FROM mobile_table
->GROUP BY processor
->ORDER BY avg_price DESC
->```
-### 9. Highest Mobile Price By Company
+>**Data Result Sample**
+>
+>![image](https://github.com/user-attachments/assets/96eebc73-76db-41cb-afc4-d9a190973473)
+>
+>**Visualization**
+>
+>![image](https://github.com/user-attachments/assets/8b8e08b1-e167-4098-96fd-68440ab6a18b)
+
+### 8. Highest Mobile Price By Company
 >```sql
 >SELECT 
 >	m.company_name,
@@ -293,7 +322,15 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >ORDER BY m.launch_price_usd
 >
 >```
-### 10. Lowest Mobile Price By Company
+>**Data Result Sample**
+>
+>![image](https://github.com/user-attachments/assets/4e7ece7f-bee3-4940-87fd-167381d230a8)
+>
+>**Visualization**
+>
+>![image](https://github.com/user-attachments/assets/34f19cdf-e5e0-4d61-8e91-4b5981120d08)
+
+### 9. Lowest Mobile Price By Company
 >```sql
 >SELECT 
 >	m.company_name,
@@ -311,18 +348,16 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >	FROM mobile_table
 >	WHERE company_name = m.company_name)
 >ORDER BY m.launch_price_usd
+>```
+>**Data Result Sample**
 >
->```
-### 11. Average Mobile Price Per Company
->```sql
->SELECT 
->	company_name,
->	AVG(launch_price_usd) AS average_price
->FROM mobile_table 
->GROUP BY company_name
->ORDER BY average_price 
->```
-### 12. Cheapest Mobile Phone Per Processor Type
+>![image](https://github.com/user-attachments/assets/ad725245-e344-4536-96c3-34fa578979e7)
+>
+>**Data Visualization**
+>
+>![image](https://github.com/user-attachments/assets/7c8dbd74-481f-4e11-9dce-1256a3bd8c49)
+
+### 10. Cheapest Mobile Phone Per Processor Type
 >```sql
 >WITH avg_temp AS(
 >	SELECT 
@@ -343,10 +378,15 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >    FROM mobile_table 
 >    WHERE processor = mt.processor
 >)
->
->
 >```
+>**Data Result Sample**
 >
+>![image](https://github.com/user-attachments/assets/48f9877c-4218-4557-bc1c-53aaeb31bab8)
+>
+>**Visualization**
+>
+>
+
 
 
 
