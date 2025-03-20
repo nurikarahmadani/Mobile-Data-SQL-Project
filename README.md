@@ -1,6 +1,6 @@
 # Mobile Phone-Data-SQL-Project
 ## Project Overview
-This project demonstrates various data analysis skills and techniques using Power BI for reporting and dashboard creation, and SQL for data analysis. The goal is to showcase proficiency in data cleaning, exploration, visualization, and statistical analysis.
+The Mobile Data SQL Project is a data analysis project that leverages SQL to extract insights from a dataset related to mobile phones. This project demonstrates SQL querying skills to process, filter, and analyze data, providing valuable insights into mobile phone trends, specifications, and market analysis.
 
 ## Project 1: Sales Data Analysis and Dashboard
 ### Objective
