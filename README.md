@@ -2,12 +2,11 @@
 ## Project Overview
 The Mobile Data SQL Project is a data analysis project that leverages SQL to extract insights from a dataset related to mobile phones. This project demonstrates SQL querying skills to process, filter, and analyze data, providing valuable insights into mobile phone trends, specifications, and market analysis.
 
-## Project 1: Sales Data Analysis and Dashboard
 ### Objective
 Analyze sales data to identify trends, patterns, and insights, and create a dynamic dashboard to visualize the results.
 
 ### Data
-- `sales_data.csv`: Contains sales transactions with fields for date, item, quantity, price, and total sales.
+[Dataset](https://github.com/nurikarahmadani/Mobile-Data-SQL-Project/blob/main/Mobiles_Dataset_2025.csv)
 
 ### Steps
 1. Database Preparation
@@ -18,10 +17,9 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 
 ### Tools and Techniques
 - Power BI
-- SQL
-- Python (Pandas, Matplotlib, Seaborn) - Optional for initial analysis
+- SQL (Microsoft SQL Server Management)
 
-### Files
+### Dashboard
 - `Sales_Analysis_Report.pbix`: Power BI report file.
 - `sales_data.csv`: Raw data file.
 
