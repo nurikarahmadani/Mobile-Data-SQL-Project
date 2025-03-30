@@ -154,6 +154,25 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >--
 >ALTER TABLE mobile_table
 >ALTER COLUMN launch_price_aed DECIMAL(10,2)
+>--Transformasidan Normalisasi Data
+
+UPDATE mobile_tb
+SET processor = CONCAT('Mediatek ', processor)
+WHERE processor NOT LIKE 'Mediatek%' AND (processor LIKE '%Dimensity%' OR processor IS NULL);
+
+UPDATE mobile_tb
+SET processor = CONCAT('Mediatek ', processor)
+WHERE processor NOT LIKE 'Mediatek%' AND (processor LIKE '%Helio%' OR processor IS NULL);
+
+
+UPDATE mobile_tb
+SET processor = CONCAT('Bionic ', processor)
+WHERE processor NOT LIKE 'Bionic%' AND (processor LIKE '%Pro%' OR processor IS NULL);
+
+UPDATE mobile_tb
+SET Processor = REPLACE(Processor, 'Snapdragon Qualcomm ', 'Snapdragon ')
+WHERE Processor LIKE '%Snapdragon Qualcomm%';
+
 >```
 >**Cleaned Data Sample**
 >
