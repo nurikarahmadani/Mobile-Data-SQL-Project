@@ -269,6 +269,18 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >       WHEN CHARINDEX('periscope', lower(front_camera)) > 0 THEN 'Yes'
 >       ELSE 'No'
 >   END
+>
+>alter table mobile_tb
+add segm>entation varchar(20)
+>
+>update mobile_tb
+>set segmentation =
+>	case 
+>		when launch_price_usd<150 then 'Low End'
+>		when launch_price_usd BETWEEN 150 AND 500 THEN 'Mid Range'
+>		WHEN launch_price_usd BETWEEN 500 AND 1000 THEN 'High End'
+>        ELSE 'Ultra Premium'
+>    END;
 >```
 >**Cleaned Data Sample**
 >
