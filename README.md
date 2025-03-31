@@ -189,6 +189,86 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 >	WHEN processor LIKE '%Unisoc%' THEN 'Unisoc'
 >    ELSE 'Other'
 >END;
+>
+>alter table mobile_tb
+>add backcamera_widelens varchar(50)
+>
+>alter table mobile_tb
+>add backcamera_ultrawidelens varchar(50)
+>
+>alter table mobile_tb
+>add backcamera_telephotolens varchar(50)
+>
+>alter table mobile_tb
+>add backcamera_macrolens varchar(50)
+>
+>alter table mobile_tb
+>add backcamera_periscopelens varchar(50)
+>
+>UPDATE mobile_tb
+>SET backcamera_ultrawidelens = 
+>    CASE 
+>        WHEN CHARINDEX('ultra', lower(back_camera)) > 0 THEN 'Yes'
+>        ELSE 'No'
+>    END
+>
+>UPDATE mobile_tb
+>SET backcamera_telephotolens = 
+>    CASE 
+>        WHEN CHARINDEX('telephoto', lower(back_camera)) > 0 THEN 'Yes'
+>        ELSE 'No'
+>    END
+>
+>UPDATE mobile_tb
+>SET backcamera_macrolens = 
+>    CASE 
+>        WHEN CHARINDEX('macro', lower(back_camera)) > 0 THEN 'Yes'
+>        ELSE 'No'
+>    END
+>
+>UPDATE mobile_tb
+>SET backcamera_periscopelens = 
+>    CASE 
+>        WHEN CHARINDEX('periscope', lower(back_camera)) > 0 THEN 'Yes'
+>        ELSE 'No'
+>    END
+>
+>
+>alter table mobile_tb
+>add frontcamera_widelens varchar(50)
+>
+>alter table mobile_tb
+>add frontcamera_ultrawidelens varchar(50)
+>
+>alter table mobile_tb
+>add frontcamera_telephotolens varchar(50)
+>
+>alter table mobile_tb
+>add frontcamera_macrolens varchar(50)
+>
+>alter table mobile_tb
+>add frontcamera_periscopelens varchar(50)
+>
+>UPDATE mobile_tb
+>SET frontcamera_telephotolens = 
+>   CASE 
+>       WHEN CHARINDEX('telephoto', lower(front_camera)) > 0 THEN 'Yes'
+>       ELSE 'No'
+>   END
+>
+>UPDATE mobile_tb
+>SET frontcamera_macrolens = 
+>   CASE 
+>       WHEN CHARINDEX('macro', lower(front_camera)) > 0 THEN 'Yes'
+>       ELSE 'No'
+>   END
+>
+>UPDATE mobile_tb
+>SET frontcamera_periscopelens = 
+>   CASE 
+>       WHEN CHARINDEX('periscope', lower(front_camera)) > 0 THEN 'Yes'
+>       ELSE 'No'
+>   END
 >```
 >**Cleaned Data Sample**
 >
