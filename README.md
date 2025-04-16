@@ -19,9 +19,26 @@ Analyze sales data to identify trends, patterns, and insights, and create a dyna
 - Power BI
 - SQL (Microsoft SQL Server Management)
 
-### Dashboard
-- `Sales_Analysis_Report.pbix`: Power BI report file.
-- `sales_data.csv`: Raw data file.
+### Report
+[Click here to view the interactive report in Power BI](https://app.powerbi.com/links/EETYGq9Qwx?ctid=ba657883-8e76-43e4-8134-c0d580d5fdea&pbi_source=linkShare)
+
+### Report Preview
+
+Price Analysis
+
+![mobile_report_publish_page-0001](https://github.com/user-attachments/assets/de372b43-b012-40e7-ac7a-50bec323acc1)
+
+Specification Breakdown 1 (Processor)
+
+![mobile_report_publish_page-0002](https://github.com/user-attachments/assets/19641a82-a3c6-43ba-82a1-358ebfb4bc63)
+
+Specification Breakdown 2 (Back Camera)
+
+![mobile_report_publish_page-0003](https://github.com/user-attachments/assets/f3948904-7700-4d72-afea-4c18bf1c134b)
+
+Specification Breakdown 3 (Front Camera)
+
+![mobile_report_publish_page-0004](https://github.com/user-attachments/assets/d0e8af00-bd89-46aa-b52f-75f542306cba)
 
 ## 1. Database Preparation
 >```sql
