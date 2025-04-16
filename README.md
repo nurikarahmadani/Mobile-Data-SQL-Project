@@ -2,26 +2,38 @@
 ## 📌 Project Overview
 Market trend analysis for mobile phones from 2014 to 2025, utilizing SQL for data processing and Power BI for visualization. This project encompasses price analysis, technical specifications, and market segmentation, based on data from over 900 phone models across 18 brands.
 
-### 📊 Data
+## 📊 Data
 **Source**          : [https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025](https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025)<br>
 **Period**          : 2014-2025<br>
 **Cleaned Dataset** : [Dataset](https://github.com/nurikarahmadani/Mobile-Data-SQL-Project/blob/main/Cleaned_Dataset.csv)<br>
 
-### 🎯 Objective
+## 🎯 Objective
 * Identified trends in mobile phone pricing and technical specifications.
 * Analyzed market segmentation based on price and features.
 * Provided insights for marketing strategies and product development.
 
-### 🛠️ Methodology
+## 🛠️ Methodology
 * SQL: Data processing and cleansing.
 * Power BI: Data visualization and creation of interactive dashboards.
 
-### ⭐ Demonstrated skills
+## ⭐ Demonstrated skills
 Data cleansing, data modeling, data visualization, and business analysis.
 
-### 📈 Hasil dan Temuan  
+## 📈 Findings and Insights
+📱 Market Dominance: Apple and Samsung lead the market in terms of the number of mobile phone models released, followed by Xiaomi and Oppo.
+💰 Price Segmentation:
+* Mid-range phones dominate with a market share of 52.9%.
+* High-end (27.7%) and low-end (15%) phones still hold significant market presence.
+* Ultra-premium models account for a small share (4.3%).
+💸 Average Pricing:
+* Overall average price of phones is USD 581.53.
+- Highest price: USD 2,800  Lowest price: USD 79.
 
-Let me know if you'd like to tweak this further for your portfolio! It’s looking polished and professional so far.
+🔍 Processor Brand Analysis:
+- Snapdragon and MediaTek are the most widely used processors.
+- Bionic (Apple) and Exynos (Samsung) dominate the premium segment.
+
+
 
 
 ### Steps
