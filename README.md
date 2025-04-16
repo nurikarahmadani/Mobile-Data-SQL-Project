@@ -1,12 +1,16 @@
 # Mobile Phone-Data-SQL-Project
 ## Project Overview
-The Mobile Data SQL Project is a data analysis project that leverages SQL to extract insights from a dataset related to mobile phones. This project demonstrates SQL querying skills to process, filter, and analyze data, providing valuable insights into mobile phone trends, specifications, and market analysis.
+Market trend analysis for mobile phones from 2014 to 2025, utilizing SQL for data processing and Power BI for visualization. This project encompasses price analysis, technical specifications, and market segmentation, based on data from over 900 phone models across 18 brands.
+
+### Data
+**Source** : [https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025](https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025)
+**Period** : 2014-2025
+[Dataset](https://github.com/nurikarahmadani/Mobile-Data-SQL-Project/blob/main/Mobiles_Dataset_2025.csv)
 
 ### Objective
 Analyze sales data to identify trends, patterns, and insights, and create a dynamic dashboard to visualize the results.
 
-### Data
-[Dataset](https://github.com/nurikarahmadani/Mobile-Data-SQL-Project/blob/main/Mobiles_Dataset_2025.csv)
+
 
 ### Steps
 1. Database Preparation
