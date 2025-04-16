@@ -1,15 +1,27 @@
 # Mobile Phone-Data-SQL-Project
-## Project Overview
+## 📌 Project Overview
 Market trend analysis for mobile phones from 2014 to 2025, utilizing SQL for data processing and Power BI for visualization. This project encompasses price analysis, technical specifications, and market segmentation, based on data from over 900 phone models across 18 brands.
 
-### Data
-**Source** : [https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025](https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025)
-**Period** : 2014-2025
-[Dataset](https://github.com/nurikarahmadani/Mobile-Data-SQL-Project/blob/main/Mobiles_Dataset_2025.csv)
+### 📊 Data
+**Source**          : [https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025](https://www.kaggle.com/datasets/abdulmalik1518/mobiles-dataset-2025)<br>
+**Period**          : 2014-2025<br>
+**Cleaned Dataset** : [Dataset](https://github.com/nurikarahmadani/Mobile-Data-SQL-Project/blob/main/Cleaned_Dataset.csv)<br>
 
-### Objective
-Analyze sales data to identify trends, patterns, and insights, and create a dynamic dashboard to visualize the results.
+### 🎯 Objective
+* Identified trends in mobile phone pricing and technical specifications.
+* Analyzed market segmentation based on price and features.
+* Provided insights for marketing strategies and product development.
 
+### 🛠️ Methodology
+* SQL: Data processing and cleansing.
+* Power BI: Data visualization and creation of interactive dashboards.
+
+### ⭐ Demonstrated skills
+Data cleansing, data modeling, data visualization, and business analysis.
+
+### 📈 Hasil dan Temuan  
+
+Let me know if you'd like to tweak this further for your portfolio! It’s looking polished and professional so far.
 
 
 ### Steps
