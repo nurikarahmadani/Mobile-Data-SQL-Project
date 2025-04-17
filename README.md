@@ -34,19 +34,19 @@ Data cleansing, data modeling, data visualization, and business analysis.
 
 ## 🔍 Report Preview
 
-Price Analysis
+**Price Analysis**
 
 ![mobile_report_publish_page-0001](https://github.com/user-attachments/assets/de372b43-b012-40e7-ac7a-50bec323acc1)
 
-Specification Breakdown 1 (Processor)
+**Specification Breakdown 1 (Processor)**
 
 ![mobile_report_publish_page-0002](https://github.com/user-attachments/assets/19641a82-a3c6-43ba-82a1-358ebfb4bc63)
 
-Specification Breakdown 2 (Back Camera)
+**Specification Breakdown 2 (Back Camera)**
 
 ![mobile_report_publish_page-0003](https://github.com/user-attachments/assets/f3948904-7700-4d72-afea-4c18bf1c134b)
 
-Specification Breakdown 3 (Front Camera)
+**Specification Breakdown 3 (Front Camera)**
 
 ![mobile_report_publish_page-0004](https://github.com/user-attachments/assets/d0e8af00-bd89-46aa-b52f-75f542306cba)
 
