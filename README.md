@@ -30,7 +30,7 @@ Data cleansing, data modeling, data visualization, and business analysis.
 * **Overall Trends** : Since 2018, there has been a rise in the release of premium phones, driven by advancements in camera and processor specifications.
 
 ## 📊 Report
-[Click here to view the interactive report in Power BI](https://app.powerbi.com/links/EETYGq9Qwx?ctid=ba657883-8e76-43e4-8134-c0d580d5fdea&pbi_source=linkShare)
+[Click here to view the interactive report in Power BI](https://app.powerbi.com/reportEmbed?reportId=cbbe8e76-a0a6-4924-8281-ca0f84beebaf&autoAuth=true&ctid=ba657883-8e76-43e4-8134-c0d580d5fdea)
 
 ## 🔍 Report Preview
 
