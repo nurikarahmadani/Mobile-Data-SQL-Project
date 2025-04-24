@@ -1,4 +1,4 @@
-# Mobile Phone Market Analysis (2014–2025) using SQL & Power BI
+
 ## 📌 Project Overview
 Market trend analysis for mobile phones from 2014 to 2025, utilizing SQL for data processing and Power BI for visualization. This project encompasses price analysis, technical specifications, and market segmentation, based on data from over 900 phone models across 18 brands.
 
